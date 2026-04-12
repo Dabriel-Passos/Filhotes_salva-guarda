@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhotes_salvaguarda</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+
+<body>
+    <header class="top">
+        <nav>
+            <ul>
+                <div class="botoes">
+                <a class="btn_menu" href="index.html"> <img src="./imgs/Filhotes.salvaguarda.logo.png"></img> </a>
+                    <li>
+                        <a class="btn" href="Who.html">Quem somos</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="Projects.html">Projetos</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="Entrar.html">Entrar</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <header>
+        <div class="container">
+        <button class="btn-carrossel L">←</button>
+
+            <div class="container-do-carrossel">
+
+        <div class="carrossel">
+            <img src="./imgs/coelho-de-estimacao-pet.jpg">
+            <img src="./imgs/Cachorro.jpg">
+            <img src="./imgs/CachorroAlgo.jpg">
+            <img src="./imgs/CachorroFilhote.jpg">
+            <img src="./imgs/GatoCinza.jpg">
+            <img src="./imgs/GatoPreto.jpg">
+            <img src="./imgs/Gatos filhotes.jpg">
+            <img src="./imgs/Salcicha.jpg">
+            <img src="./imgs/Tartaruga.jpg">
+            <img src="./imgs/Cachorro_Pote.jpg">
+        </div>
+
+            </div>
+
+        <button class="btn-carrossel R">→</button>
+        </div>
+
+        <nav>
+            <ul class="Desejo_ul">
+                    <li>
+                        <a class="Desejo" href="Contact.html">Desejo adotar</a>
+                    </li>
+                    <li>
+                        <a class="Desejo" href="Contact.html">Desejo divulgar</a>
+                    </li>
+            </ul>
+        </nav>
+        <div class="Intro">
+            <h1 Class="Titulo">Conheça seu novo companheiro de casa, bolsa ou apartamento!</h1>
+                <h2>Encontre um novo amigo para te acompanhar no dia a dia.</h2>
+                    <h2>Um pet traz alegria, carinho e companhia de verdade!</h2>
+                <h2>Adotar é dar uma nova chance e receber amor em dobro.</h2>
+            <h2>Abra seu coração, seu melhor amigo pode estar te esperando!</h2>
+        </div>
+    </header>
+
+    <footer>
+        <a href="Wpp.html"  target="_blank" rel="noopener noreferrer">
+            <img src="./imgs/whatsapp-svgrepo-com.svg" ></img>
+            <p>Whatsapp</p>
+        </a>
+        <a href="https://github.com/Dabriel-Passos" target="_blank" rel="noopener noreferrer">
+            <img src="./imgs/github-142-svgrepo-com.svg"></img>
+            <p>Github</p>
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-de-araujo-linhares-passos-0313933b3/" target="_blank" rel="noopener noreferrer">
+            <img src="./imgs/linkedin-svgrepo-com.svg"></img>
+            <p>LinkedIn</p>
+        </a>
+    </footer>
+    <script>
+
+    let index = 0;
+
+    const carrossel = document.querySelector('.carrossel');
+    const imagem = document.querySelectorAll('.carrossel img');
+    const btnLeft = document.querySelector('.btn-carrossel.L');
+    const btnRight = document.querySelector('.btn-carrossel.R');
+
+    const maxIndex = imagem.length - 7;
+
+    const sessao = 400;
+
+    btnRight.addEventListener('click', () => {
+        index++;
+
+        if(index>maxIndex) {
+           index=0;
+        }
+        atualizar();
+    });
+
+    btnLeft.addEventListener('click', () => {
+        index--;
+
+        if(index<0) {
+           index=maxIndex;
+        }
+        atualizar();
+    });
+
+    function atualizar() {
+        carrossel.style.transform = `translateX(-${index * sessao}px)`;
+    }
+
+    setInterval ( () => {
+        index++;
+
+        if(index>maxIndex) {
+           index=0;
+        }
+        atualizar();
+    }, 5000);
+
+</script>
+</body>
+
+
+
+</html>
