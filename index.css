@@ -77,12 +77,12 @@ a {
 }
 
 .btn-carrossel.L {
-    left:9%;
+    left:167.5px;
     
     transition: 0.3s;
 }
 .btn-carrossel.R {
-    right:9%;
+    right:167.5px;
     
     transition: 0.3s;
 }
